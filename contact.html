@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Rohan Sainju, a Software Engineering student at the University of Hertfordshire.">
+    <title>Rohan Sainju | Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Rohan Sainju</a>
+
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="technical-interests.html" >Technical Interests</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="project-details.html">Project Details</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="contact">
+            <div class="container">
+
+                <h1 class="section-title">Contact Me</h1>
+
+                <p class="contact-intro">
+                    Thank you for visiting my portfolio website.
+                    If you have any questions or would like to
+                    contact me, please use the form below.
+                </p>
+
+                <!-- Contact Information -->
+                <div class="contact-box">
+                    <h2>My Contact Information</h2>
+
+                    <p><strong>Name:</strong> Rohan Sainju</p>
+                    <p><strong>Email:</strong>
+                        <a href="mailto:rsainju982@gmail.com">
+                            rsainju982@gmail.com
+                        </a>
+                    </p>
+                    <p><strong>Phone:</strong>
+                        <a href="tel:+447919617256">
+                            07919 617256
+                        </a>
+                    </p>
+                    <p><strong>Location:</strong> Burnt Oak, UK</p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-box">
+                    <h2>Send Me a Message</h2>
+                    <form id="contactForm" novalidate>
+
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name"
+                            placeholder="Enter your full name">
+                        <p class="error" id="nameError"></p>
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="Enter your email">
+                        <p class="error" id="emailError"></p>
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject"
+                            placeholder="Enter subject">
+                        <p class="error" id="subjectError"></p>
+
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5"
+                                placeholder="Write your message here..."></textarea>
+                        <p class="error" id="messageError"></p>
+
+                        <button type="submit" class="btn">Send Message</button>
+
+                        <p id="successMessage" role="status"></p>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Rohan Sainju. All Rights Reserved.</p>
+            <p>Student Portfolio | University of Hertfordshire</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let subject = document.getElementById("subject").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            let valid = true;
+
+            // Clear previous errors
+            document.querySelectorAll(".error").forEach(function(error) {
+                error.textContent = "";
+            });
+
+            document.getElementById("successMessage").textContent = "";
+
+            // Name validation
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Please enter your name.";
+                valid = false;
+            }
+
+            // Email validation
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Please enter your email.";
+                valid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                valid = false;
+            }
+
+            // Subject validation
+            if (subject === "") {
+                document.getElementById("subjectError").textContent = "Please enter a subject.";
+                valid = false;
+            }
+
+            // Message validation
+            if (message === "") {
+                document.getElementById("messageError").textContent = "Please enter your message.";
+                valid = false;
+            }
+
+            // Success message
+            if (valid) {
+                document.getElementById("successMessage").textContent =
+                    "Form validated successfully! This is a demo form, so your message has not been sent.";
+
+                document.getElementById("contactForm").reset();
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,440 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf0;
+    color: #444444;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #17324d;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #17324d;
+    padding: 18px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #71d5c3;
+}
+
+/* Introduction Section */
+.hero {
+    padding: 70px 0;
+    background-color: #fffaf0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-heading {
+    color: #168b7c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.hero h1 span {
+    color: #168b7c;
+}
+
+.hero h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.university {
+    color: #168b7c;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 15px;
+}
+
+.hero-image {
+    width: 300px;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 5px solid #d5eae7;
+    border-radius: 12px;
+}
+
+/* Portfolio Button */
+.btn {
+    display: inline-block;
+    background-color: #168b7c;
+    color: white;
+    padding: 12px 24px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #106d61;
+}
+
+/* About Me Section */
+.about {
+    background-color: #eaf3f8;
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.about-box {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #dbe5eb;
+    border-radius: 8px;
+}
+
+.about-box h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    margin-bottom: 14px;
+}
+
+.about-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Form Validation Messages */
+.error {
+    color: #cc0000;
+    font-size: 13px;
+    margin-top: -12px;
+    margin-bottom: 15px;
+}
+
+#successMessage {
+    color: #16803c;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+/* Basic Information Section */
+.information {
+    background-color: #fffaf0;
+    padding: 60px 0;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.info-box {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #dce5e9;
+    border-radius: 8px;
+    padding: 15px 30px;
+}
+
+.info-row {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+    gap: 20px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row strong {
+    width: 35%;
+    color: #17324d;
+}
+
+.info-row span {
+    flex: 1;
+}
+
+
+/* Technical Interests Page */
+.technical {
+    padding: 50px 0;
+    background-color: #fffaf0;
+}
+
+.technical-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+.interest-box {
+    background-color: #eaf3f8;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #dbe5eb;
+    border-radius: 8px;
+}
+
+.interest-box img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+}
+
+.interest-box h2 {
+    color: #17324d;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.interest-box p {
+    margin-bottom: 15px;
+}
+
+/* Portfolio Page */
+.portfolio {
+    background-color: #fffaf0;
+    padding: 50px 0;
+}
+
+.portfolio-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+.portfolio-list {
+    display: flex;
+    gap: 25px;
+}
+
+.portfolio-box {
+    background-color: #eaf3f8;
+    padding: 25px;
+    border: 1px solid #dbe5eb;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.portfolio-box h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.portfolio-box p {
+    margin-bottom: 15px;
+}
+
+/* Project Details Page */
+.project-details {
+    background-color: #fffaf0;
+    padding: 50px 0;
+}
+
+.project-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-box {
+    background-color: #eaf3f8;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #dbe5eb;
+    border-radius: 8px;
+}
+
+.project-box h2 {
+    color: #17324d;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.project-box h3 {
+    color: #168b7c;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.project-box img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.project-box p {
+    margin-bottom: 15px;
+}
+
+.project-box ul {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+/* Contact Page */
+.contact {
+    background-color: #fffaf0;
+    padding: 50px 0;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-box {
+    background-color: #eaf3f8;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #dbe5eb;
+    border-radius: 8px;
+}
+
+.contact-box h2 {
+    color: #17324d;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.contact-box p {
+    margin-bottom: 10px;
+}
+
+.contact-box a {
+    color: #168b7c;
+}
+
+/* Contact Form */
+.contact form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #17324d;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.contact form textarea {
+    resize: vertical;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: 2px solid #168b7c;
+}
+
+.contact form button {
+    border: none;
+    cursor: pointer;
+}
+/* Footer */
+footer {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+
